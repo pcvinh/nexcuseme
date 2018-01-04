@@ -1,0 +1,45 @@
+<ion-side-menus enable-menu-with-back-views="false">
+	<ion-side-menu-content>
+		<ion-nav-bar class="bar-stable">
+			<ion-nav-back-button></ion-nav-back-button>
+			<ion-nav-buttons side="left">
+				<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
+		<ion-nav-view name="menuContent"></ion-nav-view>
+	</ion-side-menu-content>
+	<ion-side-menu side="left">
+		<ion-header-bar class="bar-stable">
+			<h1 class="title">Nexcuse.me</h1>
+		</ion-header-bar>
+		<ion-content>
+			<ion-list>
+				<!--ion-item class="item item-icon-left balanced" menu-close href="#"><i class="icon ion-load-d"></i>
+		  Stop receiving 
+        </ion-item-->
+				<ion-item class="item item-icon-left dark" menu-close href="#/app/nexplory">
+					<i class="icon ion-load-a"></i> Nexplory
+                
+				</ion-item>
+				<ion-item class="item item-icon-left dark" menu-close href="#/app/inbox">
+					<i class="icon ion-ios-email-outline"></i> Inbox
+                    
+					<span class="badge badge-assertive">9+</span>
+				</ion-item>
+				<ion-item class="item item-icon-left dark" menu-close href="#/app/notification">
+					<i class="icon ion-paper-airplane"></i> Notification
+                    
+					<span class="item-note">1</span>
+				</ion-item>
+				<ion-item class="item item-icon-left" menu-close href="#/app/settings">
+					<i class="icon ion-ios-people-outline"></i> Settings
+                
+				</ion-item>
+				<ion-item class="item item-icon-left" menu-close ng-click="logout()">
+					<i class="icon ion-log-out"></i> Logout
+                
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>

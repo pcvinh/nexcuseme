@@ -1,0 +1,23 @@
+<ion-view view-title="Nexcuse.me">
+    <ion-nav-title>Nexcuse.me
+        <ion-spinner icon="ripple" style="width: 18px"></ion-spinner>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button button-balanced" ng-click="Inbox.openCreateRequestModal()">
+		<i class="icon ion-paper-airplane"></i> Send
+		</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list card thread-type-group" ng-repeat="thread in InboxGroup.THREADS" ng-click="go(thread.tx_id)">
+            <div class="item item-divider tmp-thread-{{tmpThread}}">
+                {{thread.responder.name}} - {{thread.last_msg.time}}
+            </div>
+            <div class="item item-text-wrap">
+                {{thread.last_msg.msg}}
+            </div>
+            <div class="item item-divider">
+                {{thread.tx.asking}} {{thread.tx.loc}} {{thread.tx.time}} {{thread.tx.quote}} {{thread.tx.status}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,22 @@
+<ion-modal-view ng-controller="SendResponseCtrl as popup">
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">Post a message</h1>
+        <button class="button button-clear button-primary" ng-click="Notification.closeSendResponseModal()">Close</button>
+    </ion-header-bar>
+    <ion-content class="padding" has-bouncing="false">
+        {{selectedNotification._id}}
+        <form ng-submit="popup.sendResponse(popup.message)">
+            <div class="list">
+                <label class="item item-input" style="border-width:0px">
+		<textarea placeholder="" rows="2" ng-model="popup.message.msg" auto-grow></textarea>
+	  </label>
+            </div>
+            <div class="padding">
+                <button type="submit" class="button button-block button-positive">Create</button>
+            </div>
+        </form>
+    </ion-content>
+    <ion-footer-bar keyboard-attach align-title="right" class="bar-light item-input-inset">
+        <a class="button button-icon icon ion-camera" ng-click="showPhotosActionSheet()"></a>
+    </ion-footer-bar>
+</ion-modal-view>

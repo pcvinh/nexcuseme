@@ -1,0 +1,17 @@
+<ion-view view-title="Notification">
+    <ion-content>
+        <ion-refresher on-refresh="refresh()"></ion-refresher>
+        <div class="list card thread-type-group" ng-repeat="notification in Notification.NOTIFICATIONS | orderBy : '-time'">
+            <div class="item item-divider">
+                {{notification.requestor.name}} - {{notification.cat}} - {{notification.time}}
+            </div>
+            <div class="item item-text-wrap">
+                {{notification.msg}}
+            </div>
+            <div class="item item-divider item-icon-right">
+                {{notification.status}} {{thread.tx.asking}} {{thread.tx.loc}} {{thread.tx.time}}
+                <i class="icon ion-ios-telephone-outline" ng-click="Notification.openSendResponseModal(notification)"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

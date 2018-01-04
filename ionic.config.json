@@ -1,0 +1,44 @@
+{
+  "name": "app",
+  "app_id": "525d83b2",
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ],
+  "proxies": [
+    {
+      "path": "/sendRequest",
+      "proxyUrl": "http://localhost:3000/sendRequest"
+    },
+    {
+      "path": "/sendResponse",
+      "proxyUrl": "http://localhost:3000/sendResponse"
+    },
+    {
+      "path": "/sendMessage",
+      "proxyUrl": "http://localhost:3000/sendMessage"
+    },
+    {
+      "path": "/sendMessage",
+      "proxyUrl": "http://localhost:3000/sendTX1"
+    },
+    {
+      "path": "/sendMessage",
+      "proxyUrl": "http://localhost:3000/sendTX2"
+    },
+    {
+      "path": "/signup_basic_name",
+      "proxyUrl": "http://localhost:3000/signup_basic_name"
+    },
+    {
+      "path": "/signup_basic_avatar",
+      "proxyUrl": "http://localhost:3000/signup_basic_avatar"
+    }
+  ],
+  "integrations": {
+    "cordova": {}
+  }
+}

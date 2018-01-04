@@ -1,0 +1,20 @@
+<ion-view view-title="Chat">
+    <ion-content padding="true" on-swipe-left="hideTime = false" on-swipe-right="hideTime = true">
+
+        <div ng-repeat="message in Chat.messages | orderBy : 'time'" ng-class="{other: message.sender_id != Chat.myId}" class="messages">
+            <div class="message" ng-class="{'slide-right': hideTime, '': !hideTime}">
+                <span>{{ message.msg }}</span>
+            </div>
+            <div class="time" ng-class="{'slide-right': hideTime, '': !hideTime}">{{message.time}}</div>
+        </div>
+    </ion-content>
+
+    <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
+        <label class="item-input-wrapper">
+        <input type="text" placeholder="Type your message" on-return="Chat.sendMessage(); closeKeyboard()" ng-model="data.message" on-focus="inputUp()" on-blur="inputDown()" />
+      </label>
+        <button class="button button-clear" ng-click="Chat.sendMessage()">
+        Send
+      </button>
+    </ion-footer-bar>
+</ion-view>

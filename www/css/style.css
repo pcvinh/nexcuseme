@@ -1,0 +1,46 @@
+/* Empty. Add your own CSS if you like */
+.folded-corner {
+  position: relative;
+  background-color: #ffff99;
+}
+.folded-corner:last-child {
+  margin-bottom: 0;
+}
+.folded-corner:before, .folded-corner:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+}
+.folded-corner:before {
+  border-top: solid 10px #fff;
+  border-right: solid 10px #fff;
+  border-left: solid 10px transparent;
+  border-bottom: solid 10px transparent;
+}
+.folded-corner:after {
+  border-bottom: solid 10px #b3b300;
+  border-left: solid 10px #b3b300;
+  border-right: solid 10px transparent;
+  border-top: solid 10px transparent;
+}
+
+.inbox-item-unread {
+	font-weight: bold;
+	color:black;
+}
+
+.thread-type-group {
+-webkit-box-shadow: 5px 5px 1px 0px rgba(33,33,38,1);
+-moz-box-shadow: 5px 5px 1px 0px rgba(33,33,38,1);
+box-shadow: 5px 5px 1px 0px rgba(33,33,38,1);
+}
+
+.thread-type-request {
+	
+}
+
+.thread-type-response {
+	
+}

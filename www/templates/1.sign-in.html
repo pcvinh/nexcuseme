@@ -1,0 +1,20 @@
+<ion-view view-title="Sign-In">
+    <ion-content padding="true" class="has-header">
+        <div>
+            <div class="spacer" style="width: 300px; height: 92px;"></div>
+        </div>
+        <form class="list">
+            <label class="item item-input">
+       <span class="icon ion-person"></span>
+        <input type="text" ng-model="user.username" placeholder="Username">
+      </label>
+            <label class="item item-input">
+        <span class="icon ion-locked "></span>
+        <input type="password" ng-model="user.password" placeholder="Password">
+      </label>
+        </form>
+        <button class="button button-positive button-block" ng-click="sign_in(user.username, user.password)">Tap me!</button>
+        <p>Forget password? <a href="#">Click here now</a><span class="fontawesome-arrow-right"></span></p>
+        <p ng-if="isLoginFalse">Login fail. You may input a wrong email or password.</p>
+    </ion-content>
+</ion-view>
